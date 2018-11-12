@@ -30,6 +30,8 @@ set_property IOSTANDARD LVCMOS25 [get_ports GMII_TX_EN]
 set_property IOSTANDARD LVCMOS25 [get_ports GMII_TX_ER]
 set_property IOSTANDARD LVCMOS25 [get_ports I2C_SDA]
 set_property IOSTANDARD LVCMOS25 [get_ports I2C_SCL]
+set_property IOSTANDARD LVCMOS25 [get_ports GPIO_SWITCH_0]
+set_property IOSTANDARD LVCMOS15 [get_ports SW_N]
 set_property IOSTANDARD LVDS [get_ports SYSCLK_200MP_IN]
 set_property IOSTANDARD LVDS [get_ports SYSCLK_200MN_IN]
 
@@ -66,6 +68,8 @@ set_property PACKAGE_PIN M28 [get_ports GMII_TX_CLK]
 set_property PACKAGE_PIN R23 [get_ports GMII_MDC]
 set_property PACKAGE_PIN L21 [get_ports I2C_SDA]
 set_property PACKAGE_PIN K21 [get_ports I2C_SCL]
+set_property PACKAGE_PIN Y29 [get_ports GPIO_SWITCH_0]
+set_property PACKAGE_PIN AA12 [get_ports SW_N]
 
 create_clock -period 5.000 -name SYSCLK_200MP_IN -waveform {0.000 2.500} [get_ports SYSCLK_200MP_IN]
 create_clock -period 40.000 -name GMII_TX_CLK -waveform {0.000 20.000} [get_ports GMII_TX_CLK]
@@ -82,7 +86,7 @@ set_property BITSTREAM.CONFIG.SPI_BUSWIDTH 4 [current_design]
 set_max_delay -datapath_only -from [get_pins {RX_CNT_reg[6]/C}] -to [get_pins GMII_1000M_reg/D] 5.000
 
 set_false_path -from [get_pins GMII_1000M_reg/C]
-set_false_path -through [get_nets SiTCP_RESET]
+set_false_path -through [get_nets RST_EEPROM]
 
 set_property IOB false [get_cells -hierarchical -filter {name =~ */GMII_RXCNT/IOB_RD_*}]
 set_property IOB false [get_cells -hierarchical -filter {name =~ */GMII_RXCNT/IOB_RDV}]
