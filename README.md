@@ -33,7 +33,7 @@ Simple TCP/IP implemented on an FPGA (Field Programmable Gate Array) for the pur
 
 * "Kc705sitcp.v"
      * Corrected the port name.
-     * Changeed system reset statement.
+     * Changed system reset statement.
      * Assigned ForceDefault to the DIP switch.
      * Instantiated RBCP module.
      * Added DIP switch assignment.
