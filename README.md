@@ -1,4 +1,4 @@
-Read this in other languages: [English](README.md), [日本語](README.ja.md)
+Read this in other languages: [English](README.md), [Japanese](README.ja.md)
 
 # SiTCP Sample Code for KC705 GMII
 
@@ -16,6 +16,8 @@ Before downloading the firmware to the KC705, please set the jumper connection o
 
 (Please see at reference Xilinx UG 810 for more information).
 
+When using VIVADO, please use EDF files as NGC files cannot be used.
+
 
 ## What is SiTCP
 
@@ -28,6 +30,13 @@ Simple TCP/IP implemented on an FPGA (Field Programmable Gate Array) for the pur
 
 
 ## History
+
+#### 2025-11-11 Ver.1.0.2
+
+* "EDF_SiTCP.xdc"
+     * New addition.
+* "SiTCP_XC7K_32K_BBT_V110.edf"
+     * New addition.
 
 #### 2022-06-07 Ver.1.0.1
 
